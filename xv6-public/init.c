@@ -20,13 +20,15 @@ main(void)
   dup(0);  // stderr
 
   for(;;){
-    printf(1, "init: starting sh\n");
+    printf(1, "supercalifragilisticoespiadidoso \n");
     pid = fork();
     if(pid < 0){
       printf(1, "init: fork failed\n");
       exit();
     }
     if(pid == 0){
+      // 1) Cuando cambio ls paso esto 
+      // 2) noexisteprograma
       exec("sh", argv);
       printf(1, "init: exec sh failed\n");
       exit();
